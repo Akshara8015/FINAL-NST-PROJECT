@@ -9,7 +9,6 @@ from wtforms.validators import InputRequired
 from PIL import Image
 from torchvision import transforms
 import io
-import gradio as gr
 
 # Import your existing AdaIN code
 from utils.models import VGGEncoder, Decoder
@@ -75,17 +74,7 @@ def save_image(image, path):
     image = image.clamp(0, 1)
     image = transforms.ToPILImage()(image)
     image.save(path)
-
-
-import gradio as gr
-
-def greet(name):
-    return "Hello " + name + "!!"
-
-demo = gr.Interface(fn=greet, inputs="text", outputs="text")
-demo.launch()
-
-
+    
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
