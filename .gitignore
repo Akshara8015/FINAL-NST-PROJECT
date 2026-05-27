@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Environments
+venv/
+env/
+.venv/
+last_project/
+.env
+
+# IDE
+.vscode/
+
+# Build outputs
+dist/
+build/
+
+# Model files (handled by LFS if needed)
+# *.pth
+
+# .gitignore
+# NSTPROJECT/
+
